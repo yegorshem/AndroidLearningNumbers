@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Learning Numbers</string>
+    <string name="app_instructions">Click on the greater number</string>
+    <string name="button_one">0</string>
+    <string name="button_two">0</string>
+    <string name="score">Score: 0</string>
+    <string name="roundsPlayed">Rounds Played: 0</string>
+</resources>
