@@ -7,10 +7,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author Yegor Shemereko
+ * @version 1.1
+ *          This is the main activity that displays the buttons, games played, and score
+ */
 public class MainActivity extends AppCompatActivity {
 
     LearningNumbersModel model = new LearningNumbersModel();
 
+    // elements of the activity
     Button buttonOne;
     Button buttonTwo;
     TextView score;
@@ -21,14 +27,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //assigning elements to a pointer by ID
         buttonOne = (Button) findViewById(R.id.buttonOne);
         buttonTwo = (Button) findViewById(R.id.buttonTwo);
         score = (TextView) findViewById(R.id.score);
         roundsPlayed = (TextView) findViewById(R.id.roundsPlayed);
 
+        //refresh all the tesxt in the activity
         updateStrings();
     }
 
+    /**
+     * This function plays the game according to the choice the user chooses
+     *
+     * @param view current element this function works on
+     */
     public void buttonOne(View view) {
         String toast;
 
@@ -42,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         updateStrings();
     }
 
+    /**
+     * This function plays the game according to the choice the user chooses
+     *
+     * @param view current element this function works on
+     */
     public void buttonTwo(View view) {
         String toast;
 
@@ -55,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This function updates all the strings on the screen
+     */
     private void updateStrings() {
 
         String scoreText = ("Score: " + String.valueOf(model.getScore()));
